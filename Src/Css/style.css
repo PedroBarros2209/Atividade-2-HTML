@@ -1,0 +1,556 @@
+/*Font Import Link*/
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400&display=swap");
+
+/*Root Config*/
+:root {
+  /* Margens */
+  --mg-sm: 0.5em;
+  --mg-md: 1em;
+  --mg-lg: 2em;
+  --mg-xl: 3em;
+
+  /* Padding */
+  --pd-sm: 0.5em;
+  --pd-md: 1em;
+  --pd-lg: 2em;
+  --pd-xl: 3em;
+
+  /* Tipografia */
+
+  --ff-Vietnam: "Be Vietnam Pro", sans-serif;
+
+  --fs-1: 2.2rem;
+  --fs-2: 1.5rem;
+  --fs-3: 1.25rem;
+  --fs-4: 1.078rem;
+  --fs-5: 1rem;
+  --fs-6: 0.938rem;
+  --fs-7: 0.875rem;
+  --fs-8: 0.844rem;
+  --fs-9: 0.813rem;
+  --fs-10: 0.769rem;
+
+  /* Font Weight */
+  --fw-100: 100;
+  --fw-200: 200;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /* GREY PALLETE */
+  --grey-1: #404040;
+  --grey-2: #8c8c8c;
+  --grey-3: #a6a6a6;
+  --grey-4: #bfbfbf;
+  --grey-5: #d9d9d9;
+
+  /* BLUE PALLETE */
+  --blue-1: #0554f2;
+  --blue-2: #056cf2;
+  --blue-3: #77acf2;
+  --blue-4: #0583f2;
+  --blue-5: #b6d6f2;
+  /* Cores */
+
+  --p-color: #dce6f2;
+  --s-color: #1e0d8c;
+  --t-color: #2c0aa6;
+  --f-color: #6907f2;
+  --ff-color: #9904d9;
+
+  --blk-color: #0d0d0d;
+  --grey-color: hsl(225, 11%, 59%);
+  --light-grey: rgb(240, 233, 233);
+  --lght-blk-color: #262626;
+  --green-color: #0da633;
+  --red-orange-color: #f2522e;
+  --light-white: #fcfcfa;
+  --yellow-color: #f2ce16;
+
+  /* Sombras */
+
+  --shadow-1: inset 0px 0px 15px -7px rgba(189, 189, 189, 1);
+  --shadow-2: inset 0px 0px 15px -7px rgba(189, 189, 189, 1);
+  --shadow-3: inset 0px 0px 15px -7px rgba(189, 189, 189, 1);
+
+  /**
+   * transition
+   */
+
+  --transition: 0.25s ease;
+  --cubic-out: cubic-bezier(0.45, 0.85, 0.5, 1);
+  --cubic-in: cubic-bezier(0.5, 0, 0.5, 0.95);
+}
+
+body {
+  background-color: rgb(223, 217, 217) !important;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+p {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+/* Header */
+.navbar-toggler-icon {
+  width: 0.9em !important;
+  height: 1em !important;
+}
+
+/* Navbar */
+.navbar {
+  border: none !important;
+  border-radius: 0px 0px 11px 11px !important;
+  padding-bottom: 1em;
+}
+/* Estilo personalizado para centralizar os itens no menu mobile */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    text-align: center;
+  }
+  .navbar-collapse li {
+    border-bottom: 0.8px solid #ccc;
+  }
+  .navbar-nav {
+    width: 100%;
+  }
+  .nav-item {
+    padding: 0.5rem 0;
+  }
+}
+.active {
+  color: var(--blue-1) !important;
+}
+.nav-item:hover a {
+  color: var(--blue-1) !important;
+}
+/* Efeito de linha animada nos links */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  color: var(--grey-1) !important;
+  font-size: var(--fs-4);
+  font-weight: var(--fw-400);
+  opacity: 75% !important;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 65%;
+}
+
+/* Ajuste para o link ativo */
+.nav-link.active::after {
+  width: 65%;
+}
+
+/* SECAO 1 */
+.container-1 {
+  margin-top: 4em;
+  margin-bottom: 4em;
+  padding: 0em 3em 0em 3em;
+  border: none;
+  border-radius: 0.7em;
+
+  /* SOMBRA INTERNA */
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+/* CONTAINER TITULO */
+.container-title-1 {
+  color: var(--grey-1);
+  font-size: var(--fs-1);
+  font-family: var(--ff-Vietnam);
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.card-bg-img {
+  background-image: url(../Imagens/Cards/primeira.jpg);
+  object-fit: cover;
+}
+
+/* Estilo personalizado para os cards com imagem de fundo */
+.card-with-bg {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  height: 100%;
+  border: none;
+  overflow: hidden;
+  position: relative;
+  min-height: 300px; /* Altura mínima para os cards */
+  color: white; /* Cor do texto para contraste com o fundo */
+}
+
+.card-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(
+    0.7
+  ); /* Escurece um pouco a imagem para melhorar legibilidade do texto */
+}
+
+.card-content {
+  border: none;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between; /* Distribui o espaço entre os elementos */
+}
+.card-content a {
+  align-self: center;
+  width: 100%;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.btn-card {
+  background-color: var(--blue-2);
+  border: none;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Empurra o botão para baixo */
+  align-self: flex-start; /* Alinha o botão à esquerda */
+}
+
+.btn-card:hover {
+  background-color: var(--blue-2);
+}
+
+/* Efeito hover no card */
+.card-with-bg:hover {
+  /* transform: translateY(-5px); */
+  transform: translate3d(0, -5px, 0);
+  box-shadow: 0px 07px 15px var(--blue-2);
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 768px) {
+  .card-with-bg {
+    min-height: 250px;
+  }
+}
+/* DASHBOARD PAGE */
+.table-header {
+  background-color: var(--blue-1) !important;
+  font-family: var(--ff-Vietnam) !important;
+  font-size: var(--fs-3) !important;
+}
+.table-wrapper {
+  background-color: var(--blue-4) !important;
+}
+
+.container-2 {
+  margin-top: 4em;
+  margin-bottom: 4em;
+  padding: 3em;
+  border: none;
+  border-radius: 0.7em;
+
+  /* SOMBRA INTERNA */
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+/* CONTAINER TITULO */
+.container-title-2 {
+  color: var(--grey-1);
+  font-size: var(--fs-1);
+  font-family: var(--ff-Vietnam);
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.table-wrapper {
+  margin-bottom: 2rem;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.table-header {
+  padding: 1rem;
+  background-color: #0d6efd;
+  color: white;
+  margin-bottom: 0;
+}
+
+/* Variação 1 - Tabela padrão */
+.table-style-1 {
+  margin-bottom: 0;
+}
+
+.table-style-1 thead {
+  background-color: #f1f1f1;
+}
+
+.table-style-1 tbody tr:hover {
+  background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Variação 2 - Tabela com bordas */
+.table-style-2 {
+  margin-bottom: 0;
+}
+
+.table-style-2 th,
+.table-style-2 td {
+  border: 1px solid #dee2e6;
+}
+
+.table-style-2 thead {
+  background-color: #e9ecef;
+}
+
+/* Variação 3 - Tabela escura */
+.table-style-3 {
+  margin-bottom: 0;
+  color: white;
+}
+
+.table-style-3 thead {
+  background-color: #212529;
+}
+
+.table-style-3 tbody {
+  background-color: #343a40;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+  .full-width-table {
+    padding-left: 0;
+    padding-right: 0;
+    gap: 2em;
+  }
+
+  .table-header {
+    font-size: 1.1rem;
+  }
+}
+/* Estilos personalizados */
+
+.gallery-card {
+  background-color: var(--blue-1);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.1);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--grey-5);
+}
+
+.card-text {
+  color: var(--grey-3);
+  margin-bottom: 1.5rem;
+  font-size: var(--fs-5);
+}
+
+/* Centralização especial para o card do meio */
+.center-card {
+  display: flex;
+  justify-content: center;
+}
+
+.center-card .gallery-card {
+  max-width: 600px; /* Largura máxima para o card central */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .center-card .gallery-card {
+    max-width: 100%;
+  }
+
+  .card-img-container {
+    height: 150px;
+  }
+}
+.gallery-card {
+  max-width: 100% !important;
+}
+.gallery-card-alt {
+  background-image: url(../Imagens/Cards/segunda.jpg);
+  background-size: cover;
+  background-position: center;
+}
+/* SECAO 1 */
+.sec-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container-main {
+  background-color: aqua;
+  padding: 4em 4em;
+  width: 50%;
+  margin: 3em 0.5em;
+  border: none;
+  border-radius: 1.8em;
+}
+/* Carouel */
+.carousel {
+  width: fit-content !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none !important;
+}
+.carousel-inner {
+  width: 100% !important;
+  border: none !important;
+  border-radius: 1.8em !important;
+}
+/* PAGINA JORNAL */
+.container-1 {
+  padding-top: 3em;
+}
+/* PAGINA FAMOUS */
+/* Estilos personalizados */
+/* .media-container {
+  padding: 3rem 0;
+  background-color: #f8f9fa;
+} */
+
+.media-group {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.info-card {
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-weight: 700;
+  color: var(--grey-5);
+  margin-bottom: 1rem;
+}
+.card-title-2 {
+  color: var(--grey-1);
+}
+
+.card-subtitle {
+  color: var(--grey-4);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+.card-subtitle-2 {
+  color: var(--grey-2);
+}
+.card-text-3 {
+  color: var(--grey-3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .media-group {
+    flex-direction: column;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+}
+.cont {
+  padding-bottom: 3em;
+}
